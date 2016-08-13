@@ -1,5 +1,5 @@
 <div class="card-container">
-  <md-card x-large class="sample-content">Your Content Here</md-card>
+  <md-card x-large class="sample-content">Pimatic-Angular2</md-card>
   <md-card>
     For hot module reloading run
     <pre>npm run start:hmr</pre>
@@ -17,7 +17,7 @@
           autofocus>
         </md-input>
 
-        <button md-raised-button color="primary">Submit Value</button>
+        <button md-raised-button color="primary" (click)="onPushMe()">push me</button>
       </form>
       <!--
         <input type="text" [value]="localState.value" (input)="localState.value = $event.target.value" autofocus>
