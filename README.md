@@ -4,6 +4,7 @@ angular2 frontend for pimatic
 Help is welcome!
 
 Still a long ways to go. 
+
 A seed project branched from angular-webpack-starter can be found in the development branch.
 
 Alternatives:
