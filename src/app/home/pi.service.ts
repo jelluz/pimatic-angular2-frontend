@@ -25,15 +25,15 @@ export class PiService {
     // let headers = new Headers({ 'Content-Type': 'application/json' });
     var headers = new Headers();
     headers.append('Content-Type', 'application/x-www-form-urlencoded');
+
+    // todo: this is base64 encoding. Now hard coded. Fix this! :
     headers.append('Authorization' , 'Basic ' + 'YWRtaW46c2ltb24=')
+
+    // headers.append('Authorization' , 'Basic ' + Base64.encode('username:password'))
     let options = new RequestOptions({ headers: headers});
-    this.http.get('http://192.168.1.15/api/config', options)
+    return this.http.get('http://192.168.1.15/api/config', options)
         .map(response => response.json())
-        .subscribe(
-        response => console.log(response),
-        error=>console.log(error),
-        () => console.log('Authentication Complete')
-        );
+
 
     // return this.http.get("http://admin:simon@192.168.1.15/api/config/settings/gui")
     // // .map(res=>res.json())
